@@ -1,7 +1,3 @@
-/**
- * ProjectDetails Component
- * Detailed view of a single project
- */
 
 import { useParams, useNavigate } from 'react-router-dom';
 import { useProject } from '../../hooks/useProjects';

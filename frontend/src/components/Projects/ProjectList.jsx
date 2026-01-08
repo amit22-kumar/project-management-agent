@@ -1,7 +1,4 @@
-/**
- * ProjectList Component
- * Displays all projects in a grid
- */
+
 
 import { useState } from 'react';
 import { useProjects } from '../../hooks/useProjects';

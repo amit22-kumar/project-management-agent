@@ -1,7 +1,3 @@
-/**
- * Header Component
- * Top navigation bar
- */
 
 import { Search, Bell, User } from 'lucide-react';
 import { useState } from 'react';

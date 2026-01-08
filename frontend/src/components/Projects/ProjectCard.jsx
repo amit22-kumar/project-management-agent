@@ -1,7 +1,3 @@
-/**
- * ProjectCard Component
- * Displays individual project as a card
- */
 
 import { useNavigate } from 'react-router-dom';
 import { Calendar, Target, TrendingUp } from 'lucide-react';

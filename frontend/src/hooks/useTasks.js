@@ -1,7 +1,3 @@
-/**
- * useTasks Hook
- * Manages task data and operations
- */
 
 import { useState, useCallback } from 'react';
 
@@ -15,15 +11,14 @@ export function useTasks(projectId) {
       setLoading(true);
       setError(null);
       
-      // Update local state optimistically
+      
       setTasks(prev => prev.map(task => 
         task.task_id === taskId 
           ? { ...task, status: newStatus, notes }
           : task
       ));
       
-      // Here you would call the API
-      // await api.updateTaskStatus(projectId, taskId, newStatus, notes);
+      
       
     } catch (err) {
       setError(err.message);

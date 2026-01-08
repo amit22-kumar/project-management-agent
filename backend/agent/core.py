@@ -1,12 +1,9 @@
-"""
-Integrated Project Management Agent Core
-Coordinates all modules: planner, tracker, report generator, executor, summarizer
-"""
+
 from anthropic import Anthropic
 from typing import Dict, List, Optional
 import json
 
-# Import all modules
+
 from .planner import ProjectPlanner
 from .tracker import ProgressTracker
 from .report_generator import ReportGenerator
@@ -15,10 +12,7 @@ from .summarizer import ProjectSummarizer
 from .tools import DateTimeTools, CalculationTools, DataFormatter
 
 class ProjectManagementAgent:
-    """
-    Main Project Management Agent
-    Orchestrates all components to provide comprehensive project management capabilities
-    """
+    
     
     def __init__(self, api_key: str):
         self.api_key = api_key
@@ -31,11 +25,10 @@ class ProjectManagementAgent:
         self.executor = TaskExecutor(api_key)
         self.summarizer = ProjectSummarizer(api_key)
         
-        # Conversation history
         self.conversation_history = []
         self.current_project_id = None
         
-        # System prompt
+        
         self.system_prompt = """You are an expert Project Management AI Agent. You help users:
 
 1. **Plan Projects**: Break down goals into phases, milestones, and actionable tasks

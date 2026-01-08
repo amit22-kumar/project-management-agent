@@ -1,7 +1,3 @@
-/**
- * Sidebar Component
- * Main navigation sidebar
- */
 
 import { Link, useLocation } from 'react-router-dom';
 import { 

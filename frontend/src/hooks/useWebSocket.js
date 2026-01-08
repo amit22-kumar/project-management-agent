@@ -1,7 +1,3 @@
-/**
- * useWebSocket Hook
- * React hook for WebSocket functionality
- */
 
 import { useState, useEffect, useCallback } from 'react';
 import websocketService from '../services/websocket';

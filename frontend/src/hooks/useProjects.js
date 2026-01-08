@@ -1,7 +1,3 @@
-/**
- * useProjects Hook
- * Manages project data and operations
- */
 
 import { useState, useEffect, useCallback } from 'react';
 import api from '../services/api';

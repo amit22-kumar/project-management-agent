@@ -1,7 +1,3 @@
-/**
- * MessageList Component
- * Displays chat messages
- */
 
 import { useEffect, useRef } from 'react';
 import { Bot, User } from 'lucide-react';

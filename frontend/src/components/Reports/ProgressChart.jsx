@@ -1,12 +1,8 @@
-/**
- * ProgressChart Component
- * Visual charts for project metrics using Recharts
- */
 
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 export default function ProgressChart({ projectData }) {
-  // Mock data - replace with actual project data
+  
   const taskStatusData = [
     { name: 'Not Started', value: 5, color: '#666666' },
     { name: 'In Progress', value: 8, color: '#3b82f6' },

@@ -1,7 +1,3 @@
-/**
- * InputBar Component
- * Message input field with send button
- */
 
 import { useState } from 'react';
 import { Send } from 'lucide-react';

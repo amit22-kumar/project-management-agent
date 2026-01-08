@@ -1,13 +1,10 @@
-/**
- * ReportExport Component
- * Export reports in various formats
- */
+
 
 import { Download, FileText, FileSpreadsheet, Mail } from 'lucide-react';
 
 export default function ReportExport({ reportData, projectName }) {
   const exportToPDF = () => {
-    // PDF export logic - would use library like jsPDF
+   
     console.log('Exporting to PDF...');
     alert('PDF export functionality - integrate jsPDF library');
   };

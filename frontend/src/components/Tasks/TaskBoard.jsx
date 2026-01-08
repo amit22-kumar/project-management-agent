@@ -1,7 +1,4 @@
-/**
- * TaskBoard Component
- * Kanban-style task board
- */
+
 
 import { useTasks } from '../../hooks/useTasks';
 import { groupTasksByStatus } from '../../utils/taskHelpers';

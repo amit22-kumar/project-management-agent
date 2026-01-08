@@ -1,13 +1,9 @@
-/**
- * MilestoneTracker Component
- * Tracks and displays project milestones
- */
 
 import { CheckCircle2, Circle, AlertCircle, Clock } from 'lucide-react';
 import { formatDate, daysUntil } from '../../utils/dateHelpers';
 
 export default function MilestoneTracker({ projectData }) {
-  // Mock data - replace with actual project data
+ 
   const milestones = [
     {
       id: 1,

@@ -1,7 +1,3 @@
-/**
- * Dashboard Component
- * Main dashboard with overview metrics
- */
 
 import { useProjects } from '../../hooks/useProjects';
 import { FolderKanban, CheckCircle, Clock, AlertCircle } from 'lucide-react';

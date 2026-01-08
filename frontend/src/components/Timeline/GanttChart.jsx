@@ -1,12 +1,8 @@
-/**
- * GanttChart Component
- * Visual timeline/Gantt chart for project phases and tasks
- */
 
 import { formatDate } from '../../utils/dateHelpers';
 
 export default function GanttChart({ projectData }) {
-  // Mock data - replace with actual project data
+ 
   const phases = [
     {
       id: 1,

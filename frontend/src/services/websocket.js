@@ -1,7 +1,4 @@
-/**
- * WebSocket Service
- * Manages WebSocket connection for real-time chat
- */
+
 
 const WS_BASE_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000';
 
@@ -144,6 +141,6 @@ class WebSocketService {
   }
 }
 
-// Create a single instance and export it as default
+
 const websocketService = new WebSocketService();
 export default websocketService;

@@ -1,7 +1,3 @@
-/**
- * CreateProject Component
- * Modal for creating new projects
- */
 
 import { useState } from 'react';
 import { X } from 'lucide-react';

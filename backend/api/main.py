@@ -1,7 +1,4 @@
-"""
-Project Management Agent API - NO AI MODE (Works without credits)
-FastAPI backend - Mock responses for testing
-"""
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict, List, Optional

@@ -1,7 +1,4 @@
-/**
- * TaskCard Component
- * Individual task card for board/list views
- */
+
 
 import { useState } from 'react';
 import { Clock, AlertCircle, CheckCircle2 } from 'lucide-react';

@@ -1,7 +1,4 @@
-/**
- * TaskList Component
- * List view of tasks with filtering and sorting
- */
+
 
 import { useState } from 'react';
 import { useTasks } from '../../hooks/useTasks';

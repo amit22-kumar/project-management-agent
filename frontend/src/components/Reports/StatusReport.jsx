@@ -1,7 +1,4 @@
-/**
- * StatusReport Component
- * Displays project status reports
- */
+
 
 import { useState, useEffect } from 'react';
 import { useProjects } from '../../hooks/useProjects';
@@ -17,7 +14,7 @@ export default function StatusReport() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Auto-select first project
+ 
   useEffect(() => {
     if (projects && projects.length > 0 && !selectedProjectId) {
       setSelectedProjectId(projects[0].id || projects[0].project_id);

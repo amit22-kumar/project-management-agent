@@ -1,7 +1,4 @@
-/**
- * TaskDetails Component
- * Detailed view of a task in a modal
- */
+
 
 import { X, Calendar, User, Clock, AlertCircle } from 'lucide-react';
 import { formatDate } from '../../utils/dateHelpers';

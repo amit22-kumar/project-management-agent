@@ -1,7 +1,3 @@
-/**
- * ChatInterface Component
- * Main AI assistant chat interface
- */
 
 import { useWebSocket } from '../../hooks/useWebSocket';
 import { Bot, Wifi, WifiOff } from 'lucide-react';
