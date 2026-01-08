@@ -1,7 +1,4 @@
-"""
-Planner Module
-Breaks down project goals into milestones, tasks, and timelines
-"""
+
 from anthropic import Anthropic
 from typing import Dict, List, Optional
 from datetime import datetime, timedelta

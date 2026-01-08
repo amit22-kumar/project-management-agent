@@ -103,12 +103,10 @@ Always be proactive in identifying potential issues and suggesting solutions."""
             }
         }
     
-    # ==================== PROJECT PLANNING ====================
+    
     
     def create_project(self, project_goal: str, constraints: Optional[Dict] = None) -> Dict:
-        """
-        Create a comprehensive project plan from a goal
-        """
+        
         # Use planner to break down goals
         project_plan = self.planner.break_down_goals(project_goal, constraints)
         
@@ -134,7 +132,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.planner.adjust_timeline(current_plan, adjustments)
     
-    # ==================== PROGRESS TRACKING ====================
+    #  PROGRESS TRACKING 
     
     def update_task(self, task_id: str, status: str, project_data: Dict,
                    notes: Optional[str] = None, actual_hours: Optional[float] = None) -> Dict:
@@ -182,7 +180,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.tracker.track_milestone_completion(milestone_name, project_data)
     
-    # ==================== REPORT GENERATION ====================
+    #  REPORT GENERATION 
     
     def generate_status_report(self, project_data: Dict, report_type: str = "weekly") -> str:
         """
@@ -220,7 +218,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.report_generator.generate_metrics_dashboard(project_data)
     
-    # ==================== TASK EXECUTION ====================
+    # TASK EXECUTION 
     
     def suggest_next_tasks(self, project_data: Dict, team_capacity: Optional[Dict] = None) -> Dict:
         """
@@ -246,7 +244,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.executor.coordinate_team_assignment(task_id, available_team, project_data)
     
-    # ==================== SUMMARIZATION ====================
+    # SUMMARIZATION 
     
     def summarize_for_audience(self, project_data: Dict, audience: str = "team") -> str:
         """
@@ -280,7 +278,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.summarizer.create_stakeholder_update(project_data, stakeholder_interests)
     
-    # ==================== ANALYTICS ====================
+    # ANALYTICS 
     
     def get_burndown_data(self, project_data: Dict, 
                          historical_data: Optional[List] = None) -> Dict:
@@ -302,7 +300,7 @@ Always be proactive in identifying potential issues and suggesting solutions."""
         """
         return self.summarizer.summarize_team_performance(project_data, team_data)
     
-    # ==================== UTILITIES ====================
+    # UTILITIES 
     
     def reset_conversation(self):
         """Reset conversation history"""

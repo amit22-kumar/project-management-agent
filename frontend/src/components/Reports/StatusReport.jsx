@@ -1,10 +1,13 @@
-
+/**
+ * StatusReport Component - With Working PDF Export
+ */
 
 import { useState, useEffect } from 'react';
 import { useProjects } from '../../hooks/useProjects';
-import { Download, FileText, Calendar } from 'lucide-react';
+import { FileText, Calendar } from 'lucide-react';
 import { formatDate } from '../../utils/dateHelpers';
 import ProgressChart from './ProgressChart';
+import ReportExport from './ReportExport';
 
 export default function StatusReport() {
   const { projects } = useProjects();
@@ -14,7 +17,6 @@ export default function StatusReport() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
- 
   useEffect(() => {
     if (projects && projects.length > 0 && !selectedProjectId) {
       setSelectedProjectId(projects[0].id || projects[0].project_id);
@@ -133,24 +135,28 @@ export default function StatusReport() {
       )}
 
       {report && (
-        <div style={styles.reportContent}>
-          <div style={styles.reportHeader}>
-            <div style={styles.reportMeta}>
-              <Calendar size={16} />
-              <span>Generated on {formatDate(report.generated_at)}</span>
+        <>
+          <div style={styles.reportContent}>
+            <div style={styles.reportHeader}>
+              <div style={styles.reportMeta}>
+                <Calendar size={16} />
+                <span>Generated on {formatDate(report.generated_at)}</span>
+              </div>
             </div>
-            <button style={styles.downloadButton}>
-              <Download size={16} />
-              Export PDF
-            </button>
+
+            <div style={styles.reportBody}>
+              <div style={styles.reportText}>
+                {report.report || 'Report content will appear here...'}
+              </div>
+            </div>
           </div>
 
-          <div style={styles.reportBody}>
-            <div style={styles.reportText}>
-              {report.report || 'Report content will appear here...'}
-            </div>
-          </div>
-        </div>
+          <ReportExport 
+            reportData={report}
+            projectName={selectedProject?.name || 'Project'}
+            reportText={report.report}
+          />
+        </>
       )}
 
       {!report && !loading && (
@@ -278,7 +284,7 @@ const styles = {
     border: '1px solid #2a2a2a',
     borderRadius: '12px',
     overflow: 'hidden',
-    marginBottom: '2rem',
+    marginBottom: '1rem',
   },
   reportHeader: {
     display: 'flex',
@@ -294,20 +300,10 @@ const styles = {
     fontSize: '0.875rem',
     color: '#a0a0a0',
   },
-  downloadButton: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '0.5rem',
-    padding: '0.5rem 1rem',
-    backgroundColor: 'transparent',
-    border: '1px solid #2a2a2a',
-    borderRadius: '6px',
-    color: '#a0a0a0',
-    fontSize: '0.875rem',
-    cursor: 'pointer',
-  },
   reportBody: {
     padding: '2rem',
+    maxHeight: '600px',
+    overflowY: 'auto',
   },
   reportText: {
     fontSize: '0.9375rem',
